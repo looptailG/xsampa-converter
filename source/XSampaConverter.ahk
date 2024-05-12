@@ -16,13 +16,12 @@
 
 #Requires AutoHotkey v2.0
 
-characterMappingFilePath := "CharacterMapping.tsv"
 characterMapping := Map()
 characterMappingKeys := ""
 characterMappingSortedKeys := []
 
 ; Reading character mapping file.
-fileContents := FileRead(characterMappingFilePath)
+fileContents := FileRead("CharacterMapping.tsv")
 fileContents := StrSplit(fileContents, "`n")
 For _, currentLine in fileContents
 {
@@ -36,11 +35,15 @@ For _, currentLine in fileContents
 	}
 }
 Trim(characterMappingKeys, "`n")
-; Sort the keys in decreasing length order.  They have to be replaced in reverse
-; length order so that the shorter keys don't replace some of the characters
-; which are part of a longer key.
+
+; Sort the keys in decreasing length order.  They have to be replaced in
+; decreasing length order so that the shorter keys don't replace some of the
+; characters which are part of a longer key.
 characterMappingKeys := Sort(characterMappingKeys, , reverseSortByLength)
 characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
+
+; Free memory.
+characterMappingKeys := ""
 
 RCtrl::
 {
