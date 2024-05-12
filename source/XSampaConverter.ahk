@@ -18,6 +18,7 @@
 
 characterMappingFilePath := "CharacterMapping.tsv"
 characterMapping := Map()
+characterMappingKeys := ""
 characterMappingSortedKeys := []
 
 ; Reading character mapping file.
@@ -31,14 +32,15 @@ For _, currentLine in fileContents
 		key := Trim(currentLine[1], " `t`n`r")
 		value := Trim(currentLine[2], " `t`n`r")
 		characterMapping[key] := value
-		characterMappingSortedKeys.Push(key)
+		characterMappingKeys .= key . "`n"
 	}
 }
+Trim(characterMappingKeys, "`n")
 ; Sort the keys in decreasing length order.  They have to be replaced in reverse
-; length order so that the shorter keys don't replace parts of the string which
-; are part of a longer key.
-; TODO
-;Array.Sort(characterMappingSortedKeys, Func("reverseSortByLength"))
+; length order so that the shorter keys don't replace some of the characters
+; which are part of a longer key.
+characterMappingKeys := Sort(characterMappingKeys, , reverseSortByLength)
+characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 
 RCtrl::
 {
@@ -54,15 +56,20 @@ RCtrl::
 		SendInput("{Backspace}")
 	}
 	
+	; Replace XSampa strings with IPA characters.
 	For _, xsampaString in characterMappingSortedKeys
 	{
-		ipaCharacter := CharacterMapping[xsampaString]
-		inputString := StrReplace(inputString, xsampaString, ipaCharacter, "On")
+		If (xsampaString)
+		{
+			ipaCharacter := CharacterMapping[xsampaString]
+			inputString := StrReplace(inputString, xsampaString, ipaCharacter, "On")
+		}
 	}
+	
 	SendInput(inputString)
 }
 
-reverseSortByLength(s1, s2)
+reverseSortByLength(s1, s2, *)
 {
 	Return StrLen(s2) - StrLen(s1)
 }
