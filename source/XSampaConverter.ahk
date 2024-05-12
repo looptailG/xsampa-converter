@@ -19,9 +19,11 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-; Reading character mapping file.
 characterMappingFilePath := "CharacterMapping.tsv"
 characterMapping := {}
+characterMappingSortedKeys := []
+keyList := ""
+; Reading character mapping file.
 Loop
 {
 	FileReadLine, currentLine, %characterMappingFilePath%, %A_Index%
@@ -35,4 +37,16 @@ Loop
 	key := currentLine[1]
 	value := currentLine[2]
 	characterMapping[key] := value
+	keyList .= key . "`n"
+}
+keyList := Trim(keyList, "`n")
+; Sort the keys in decreasing length order.  They have to be replaced in reverse
+; length order so that the shorter keys don't replace parts of the string which
+; are part of a longer key.
+Sort, keyList, F reverseSortByLength
+characterMappingSortedKeys := StrSplit(keyList, "`n")
+
+reverseSortByLength(s1, s2)
+{
+	Return StrLen(s2) - StrLen(s1)
 }
