@@ -18,3 +18,18 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+; Reading character mapping file.
+characterMappingFilePath := "CharacterMapping.tsv"
+characterMapping := {}
+Loop
+{
+	FileReadLine, currentLine, %characterMappingFilePath%, %A_Index%
+	If ErrorLevel
+	{
+		; End of file.
+		Break
+	}
+	
+	currentLine := StrSplit(currentLine, "`t")
+}
