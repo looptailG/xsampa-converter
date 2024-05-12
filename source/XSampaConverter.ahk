@@ -32,4 +32,7 @@ Loop
 	}
 	
 	currentLine := StrSplit(currentLine, "`t")
+	key := currentLine[1]
+	value := currentLine[2]
+	characterMapping[key] := value
 }
