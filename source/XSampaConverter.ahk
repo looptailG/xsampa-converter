@@ -138,6 +138,18 @@ helpGui.AddText("X" . (8 * width) . " Y" . (8 * height) . " W" . width . " Cente
 helpGui.AddText("X0 Y" . (9 * height) . " W" . width . " Right", "Lat. Flap")
 helpGui.AddText("X" . (4 * width) . " Y" . (9 * height) . " W" . width . " Center", "l\")
 
+helpGui.AddText("X" . width . " Y" . (11 * height) . " W" . width . " Center", "Front")
+helpGui.AddText("X" . (3 * width) . " Y" . (11 * height) . " W" . width . " Center", "Central")
+helpGui.AddText("X" . (5 * width) . " Y" . (11 * height) . " W" . width . " Center", "Back")
+
+helpGui.AddText("X0 Y" . (12 * height) . " W" . width . " Right", "Close")
+
+helpGui.AddText("X0 Y" . (14 * height) . " W" . width . " Right", "Close-Mid")
+
+helpGui.AddText("X0 Y" . (16 * height) . " W" . width . " Right", "Open-Mid")
+
+helpGui.AddText("X0 Y" . (18 * height) . " W" . width . " Right", "Open")
+
 ; Free memory.
 fileContents := ""
 characterMappingKeys := ""
