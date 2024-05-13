@@ -37,7 +37,7 @@ For _, currentLine in fileContents
 }
 
 ; Read character mapping file.
-fileContents := FileRead("CharacterMapping.tsv")
+fileContents := FileRead(config["characterMappingFilePath"])
 fileContents := StrSplit(fileContents, "`n")
 For _, currentLine in fileContents
 {
@@ -62,17 +62,17 @@ characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 fileContents := ""
 characterMappingKeys := ""
 
-Hotkey "F8", replaceXSampaString
-Hotkey "F1", displayHelp
+Hotkey config["replaceStringHotkey"], replaceXSampaString
+Hotkey config["displayHelpHotkey"], displayHelp
 
 replaceXSampaString(thisHotkey)
 {
-	ih := InputHook("V", "{Tab}{Esc}")
+	ih := InputHook("V", config["endInputKeys"])
 	ih.Start()
 	ih.Wait()
 	inputString := ih.Input
 	
-	If (ih.EndKey != "Escape")
+	If (ih.EndKey != config["cancelKey"])
 	{
 		; Delete the string written by the user.
 		nCharacters := StrLen(inputString) + 1
