@@ -139,16 +139,39 @@ helpGui.AddText("X0 Y" . (9 * height) . " W" . width . " Right", "Lat. Flap")
 helpGui.AddText("X" . (4 * width) . " Y" . (9 * height) . " W" . width . " Center", "l\")
 
 helpGui.AddText("X" . width . " Y" . (11 * height) . " W" . width . " Center", "Front")
-helpGui.AddText("X" . (3 * width) . " Y" . (11 * height) . " W" . width . " Center", "Central")
-helpGui.AddText("X" . (5 * width) . " Y" . (11 * height) . " W" . width . " Center", "Back")
+helpGui.AddText("X" . (2 * width) . " Y" . (11 * height) . " W" . width . " Center", "Central")
+helpGui.AddText("X" . (3 * width) . " Y" . (11 * height) . " W" . width . " Center", "Back")
 
 helpGui.AddText("X0 Y" . (12 * height) . " W" . width . " Right", "Close")
+helpGui.AddText("X" . width . " Y" . (12 * height) . " W" . width . " Center", "i  y")
+helpGui.AddText("X" . (2 * width) . " Y" . (12 * height) . " W" . width . " Center", "1  }")
+helpGui.AddText("X" . (3 * width) . " Y" . (12 * height) . " W" . width . " Center", "M  u")
+
+helpGui.AddText("X" . width . " Y" . (13 * height) . " W" . width . " Center", "I  Y")
+helpGui.AddText("X" . (2 * width) . " Y" . (13 * height) . " W" . width . " Center", "I\  U\")
+helpGui.AddText("X" . (3 * width) . " Y" . (13 * height) . " W" . width . " Center", "U")
 
 helpGui.AddText("X0 Y" . (14 * height) . " W" . width . " Right", "Close-Mid")
+helpGui.AddText("X" . width . " Y" . (14 * height) . " W" . width . " Center", "e  2")
+helpGui.AddText("X" . (2 * width) . " Y" . (14 * height) . " W" . width . " Center", "@\  8")
+helpGui.AddText("X" . (3 * width) . " Y" . (14 * height) . " W" . width . " Center", "7  o")
+
+helpGui.AddText("X" . width . " Y" . (15 * height) . " W" . width . " Center", "e_o  2_o")
+helpGui.AddText("X" . (2 * width) . " Y" . (15 * height) . " W" . width . " Center", "@")
+helpGui.AddText("X" . (3 * width) . " Y" . (15 * height) . " W" . width . " Center", "7_o  o_o")
 
 helpGui.AddText("X0 Y" . (16 * height) . " W" . width . " Right", "Open-Mid")
+helpGui.AddText("X" . width . " Y" . (16 * height) . " W" . width . " Center", "E  9")
+helpGui.AddText("X" . (2 * width) . " Y" . (16 * height) . " W" . width . " Center", "3  3\")
+helpGui.AddText("X" . (3 * width) . " Y" . (16 * height) . " W" . width . " Center", "V  O")
+
+helpGui.AddText("X" . width . " Y" . (17 * height) . " W" . width . " Center", "{")
+helpGui.AddText("X" . (2 * width) . " Y" . (17 * height) . " W" . width . " Center", "6")
 
 helpGui.AddText("X0 Y" . (18 * height) . " W" . width . " Right", "Open")
+helpGui.AddText("X" . width . " Y" . (18 * height) . " W" . width . " Center", "a  &")
+helpGui.AddText("X" . (2 * width) . " Y" . (18 * height) . " W" . width . " Center", "a_`"")
+helpGui.AddText("X" . (3 * width) . " Y" . (18 * height) . " W" . width . " Center", "A  Q")
 
 ; Free memory.
 fileContents := ""
