@@ -16,11 +16,27 @@
 
 #Requires AutoHotkey v2.0
 
+config := Map()
+
 characterMapping := Map()
 characterMappingKeys := ""
 characterMappingSortedKeys := []
 
-; Reading character mapping file.
+; Read config file.
+fileContents := FileRead("Config.tsv")
+fileContents := StrSplit(fileContents, "`n")
+For _, currentLine in fileContents
+{
+	currentLine := StrSplit(currentLine, "`t")
+	If (currentLine.length = 2)
+	{
+		key := Trim(currentLine[1], " `t`n`r")
+		value := Trim(currentLine[2], " `t`n`r")
+		config[key] := value
+	}
+}
+
+; Read character mapping file.
 fileContents := FileRead("CharacterMapping.tsv")
 fileContents := StrSplit(fileContents, "`n")
 For _, currentLine in fileContents
@@ -43,6 +59,7 @@ characterMappingKeys := Sort(characterMappingKeys, , reverseSortByLength)
 characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 
 ; Free memory.
+fileContents := ""
 characterMappingKeys := ""
 
 Hotkey "F8", replaceXSampaString
