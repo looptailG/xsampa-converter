@@ -45,9 +45,9 @@ characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 ; Free memory.
 characterMappingKeys := ""
 
-RCtrl::
+F8::
 {
-	ih := InputHook("V", "{Tab}{Enter}")
+	ih := InputHook("V", "{Tab}")
 	ih.Start()
 	ih.Wait()
 	inputString := ih.Input
@@ -68,7 +68,6 @@ RCtrl::
 			inputString := StrReplace(inputString, xsampaString, ipaCharacter, "On")
 		}
 	}
-	
 	SendInput(inputString)
 }
 
