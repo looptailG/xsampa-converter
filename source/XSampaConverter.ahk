@@ -45,7 +45,10 @@ characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 ; Free memory.
 characterMappingKeys := ""
 
-F8::
+Hotkey "F8", replaceXSampaString
+Hotkey "F1", displayHelp
+
+replaceXSampaString(thisHotkey)
 {
 	ih := InputHook("V", "{Tab}{Esc}")
 	ih.Start()
@@ -72,6 +75,11 @@ F8::
 		}
 		SendInput(inputString)
 	}
+}
+
+displayHelp(thisHotkey)
+{
+
 }
 
 reverseSortByLength(s1, s2, *)
