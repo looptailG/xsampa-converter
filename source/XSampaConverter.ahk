@@ -47,28 +47,31 @@ characterMappingKeys := ""
 
 F8::
 {
-	ih := InputHook("V", "{Tab}")
+	ih := InputHook("V", "{Tab}{Esc}")
 	ih.Start()
 	ih.Wait()
 	inputString := ih.Input
 	
-	; Delete the string written by the user.
-	nCharacters := StrLen(inputString) + 1
-	Loop(nCharacters)
+	If (ih.EndKey != "Escape")
 	{
-		SendInput("{Backspace}")
-	}
-	
-	; Replace XSampa strings with IPA characters.
-	For _, xsampaString in characterMappingSortedKeys
-	{
-		If (xsampaString)
+		; Delete the string written by the user.
+		nCharacters := StrLen(inputString) + 1
+		Loop(nCharacters)
 		{
-			ipaCharacter := CharacterMapping[xsampaString]
-			inputString := StrReplace(inputString, xsampaString, ipaCharacter, "On")
+			SendInput("{Backspace}")
 		}
+		
+		; Replace XSampa strings with IPA characters.
+		For _, xsampaString in characterMappingSortedKeys
+		{
+			If (xsampaString)
+			{
+				ipaCharacter := CharacterMapping[xsampaString]
+				inputString := StrReplace(inputString, xsampaString, ipaCharacter, "On")
+			}
+		}
+		SendInput(inputString)
 	}
-	SendInput(inputString)
 }
 
 reverseSortByLength(s1, s2, *)
