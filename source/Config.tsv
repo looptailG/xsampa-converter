@@ -1,0 +1,5 @@
+characterMappingFilePath	CharacterMapping.tsv
+replaceStringHotkey	F8
+displayHelpHotkey	F1
+endInputKeys	{Tab}{Esc}
+cancelKey	Escape
