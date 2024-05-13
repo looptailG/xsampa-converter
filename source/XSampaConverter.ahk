@@ -58,6 +58,33 @@ Trim(characterMappingKeys, "`n")
 characterMappingKeys := Sort(characterMappingKeys, , reverseSortByLength)
 characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 
+; Build help GUI.
+width := config["columnWidth"]
+height := config["rowHeight"]
+helpGui := Gui(, "XSampa Converter", )
+helpGui.AddText("X" . width . " Y0 W" . width . " Center", "Bilabial")
+helpGui.AddText("X" . (2 * width) . " Y0 W" . width . " Center", "Labiodental")
+helpGui.AddText("X" . (3 * width) . " Y0 W" . width . " Center", "Dental")
+helpGui.AddText("X" . (4 * width) . " Y0 W" . width . " Center", "Alveolar")
+helpGui.AddText("X" . (5 * width) . " Y0 W" . width . " Center", "Post-alveolar")
+helpGui.AddText("X" . (6 * width) . " Y0 W" . width . " Center", "Retroflex")
+helpGui.AddText("X" . (7 * width) . " Y0 W" . width . " Center", "Palatal")
+helpGui.AddText("X" . (8 * width) . " Y0 W" . width . " Center", "Velar")
+helpGui.AddText("X" . (9 * width) . " Y0 W" . width . " Center", "Uvular")
+helpGui.AddText("X" . (10 * width) . " Y0 W" . width . " Center", "Pharyngeal")
+helpGui.AddText("X" . (11 * width) . " Y0 W" . width . " Center", "Epiglottal")
+helpGui.AddText("X" . (12 * width) . " Y0 W" . width . " Center", "Glottal")
+
+helpGui.AddText("X0 Y" . height . " W" . width . " Right", "Nasal")
+helpGui.AddText("X0 Y" . (2 * height) . " W" . width . " Right", "Plosive")
+helpGui.AddText("X0 Y" . (3 * height) . " W" . width . " Right", "Fricative")
+helpGui.AddText("X0 Y" . (4 * height) . " W" . width . " Right", "Approximant")
+helpGui.AddText("X0 Y" . (5 * height) . " W" . width . " Right", "Trill")
+helpGui.AddText("X0 Y" . (6 * height) . " W" . width . " Right", "Tap")
+helpGui.AddText("X0 Y" . (7 * height) . " W" . width . " Right", "Lat. Fric.")
+helpGui.AddText("X0 Y" . (8 * height) . " W" . width . " Right", "Lat. Approx.")
+helpGui.AddText("X0 Y" . (9 * height) . " W" . width . " Right", "Lat. Flap")
+
 ; Free memory.
 fileContents := ""
 characterMappingKeys := ""
@@ -96,7 +123,7 @@ replaceXSampaString(thisHotkey)
 
 displayHelp(thisHotkey)
 {
-
+	helpGui.Show()
 }
 
 reverseSortByLength(s1, s2, *)

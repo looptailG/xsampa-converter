@@ -3,3 +3,5 @@ replaceStringHotkey	F8
 displayHelpHotkey	F1
 endInputKeys	{Tab}{Esc}
 cancelKey	Escape
+columnWidth	60
+rowHeight	25
