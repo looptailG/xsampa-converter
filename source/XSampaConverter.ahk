@@ -16,6 +16,8 @@
 
 #Requires AutoHotkey v2.0
 
+version := "0.1.0"
+
 config := Map()
 
 characterMapping := Map()
@@ -61,7 +63,7 @@ characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 ; Build help GUI.
 width := config["columnWidth"]
 height := config["rowHeight"]
-helpGui := Gui(, "XSampa Converter", )
+helpGui := Gui(, "XSampa Converter - v" . version, )
 helpGui.AddText("X" . width . " Y0 W" . width . " Center", "Bilabial")
 helpGui.AddText("X" . (2 * width) . " Y0 W" . width . " Center", "Labiodental")
 helpGui.AddText("X" . (3 * width) . " Y0 W" . width . " Center", "Dental")
