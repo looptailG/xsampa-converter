@@ -9,4 +9,6 @@ Autohotkey script for typing IPA characters using their XSampa counterpart.
 - Type the XSampa string you need to convert, and then press either `Tab` or `Enter`.
 - The script will convert the XSampa string you typed to the corresponding IPA characters.  At this point the tray icon will change again to the following one: ![InactiveIcon](https://github.com/looptailG/xsampa-converter/assets/99362337/c2124d65-618e-4b18-8e2c-ba5df9b4b353)
 
+If you want to cancel the conversion after you pressed `F8`, you can do so by pressing `Esc`.
+
 If you need a reminder about the XSampa characters, you can press `F1` to have the script show a pop-up window with the most commonly used characters.
