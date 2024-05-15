@@ -175,29 +175,44 @@ helpGui.AddText("X" . width . " Y" . (18 * height) . " W" . width . " Center", "
 helpGui.AddText("X" . (2 * width) . " Y" . (18 * height) . " W" . width . " Center", "a_`"")
 helpGui.AddText("X" . (3 * width) . " Y" . (18 * height) . " W" . width . " Center", "A  Q")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (11 * height) . " W" . (3 * width) . " Right", "Voiceless labialized velar approximant")
-helpGui.AddText("X" . (10 * width) . " Y" . (11 * height) . " W" . width . " Center", "W")
+helpGui.AddText("X" . (5 * width) . " Y" . (11 * height) . " W" . (3 * width) . " Right", "Voiceless labialized velar approximant")
+helpGui.AddText("X" . (8 * width) . " Y" . (11 * height) . " W" . width . " Center", "W")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (12 * height) . " W" . (3 * width) . " Right", "Voiced labialized velar approximant")
-helpGui.AddText("X" . (10 * width) . " Y" . (12 * height) . " W" . width . " Center", "w")
+helpGui.AddText("X" . (5 * width) . " Y" . (12 * height) . " W" . (3 * width) . " Right", "Voiced labialized velar approximant")
+helpGui.AddText("X" . (8 * width) . " Y" . (12 * height) . " W" . width . " Center", "w")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (13 * height) . " W" . (3 * width) . " Right", "Voiced labialized palatal approximant")
-helpGui.AddText("X" . (10 * width) . " Y" . (13 * height) . " W" . width . " Center", "H")
+helpGui.AddText("X" . (5 * width) . " Y" . (13 * height) . " W" . (3 * width) . " Right", "Voiced labialized palatal approximant")
+helpGui.AddText("X" . (8 * width) . " Y" . (13 * height) . " W" . width . " Center", "H")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (14 * height) . " W" . (3 * width) . " Right", "Voiceless alveo-palatal fricative")
-helpGui.AddText("X" . (10 * width) . " Y" . (14 * height) . " W" . width . " Center", "s\")
+helpGui.AddText("X" . (5 * width) . " Y" . (14 * height) . " W" . (3 * width) . " Right", "Voiceless alveo-palatal fricative")
+helpGui.AddText("X" . (8 * width) . " Y" . (14 * height) . " W" . width . " Center", "s\")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (15 * height) . " W" . (3 * width) . " Right", "Voiced alveo-palatal fricative")
-helpGui.AddText("X" . (10 * width) . " Y" . (15 * height) . " W" . width . " Center", "z\")
+helpGui.AddText("X" . (5 * width) . " Y" . (15 * height) . " W" . (3 * width) . " Right", "Voiced alveo-palatal fricative")
+helpGui.AddText("X" . (8 * width) . " Y" . (15 * height) . " W" . width . " Center", "z\")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (16 * height) . " W" . (3 * width) . " Right", "Voiced palatal-velar fricative")
-helpGui.AddText("X" . (10 * width) . " Y" . (16 * height) . " W" . width . " Center", "x\")
+helpGui.AddText("X" . (5 * width) . " Y" . (16 * height) . " W" . (3 * width) . " Right", "Voiced palatal-velar fricative")
+helpGui.AddText("X" . (8 * width) . " Y" . (16 * height) . " W" . width . " Center", "x\")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (17 * height) . " W" . (3 * width) . " Right", "Implosive")
-helpGui.AddText("X" . (10 * width) . " Y" . (17 * height) . " W" . width . " Center", "_<")
+helpGui.AddText("X" . (5 * width) . " Y" . (17 * height) . " W" . (3 * width) . " Right", "Implosive")
+helpGui.AddText("X" . (8 * width) . " Y" . (17 * height) . " W" . width . " Center", "_<")
 
-helpGui.AddText("X" . (7 * width) . " Y" . (18 * height) . " W" . (3 * width) . " Right", "Ejective")
-helpGui.AddText("X" . (10 * width) . " Y" . (18 * height) . " W" . width . " Center", "_>")
+helpGui.AddText("X" . (5 * width) . " Y" . (18 * height) . " W" . (3 * width) . " Right", "Ejective")
+helpGui.AddText("X" . (8 * width) . " Y" . (18 * height) . " W" . width . " Center", "_>")
+
+helpGui.AddText("X" . (9 * width) . " Y" . (11 * height) . " W" . (3 * width) . " Right", "Bilabial click")
+helpGui.AddText("X" . (12 * width) . " Y" . (11 * height) . " W" . width . " Center", "O\")
+
+helpGui.AddText("X" . (9 * width) . " Y" . (12 * height) . " W" . (3 * width) . " Right", "Laminal alveolar click")
+helpGui.AddText("X" . (12 * width) . " Y" . (12 * height) . " W" . width . " Center", "|\")
+
+helpGui.AddText("X" . (9 * width) . " Y" . (13 * height) . " W" . (3 * width) . " Right", "Apical alveolar click")
+helpGui.AddText("X" . (12 * width) . " Y" . (13 * height) . " W" . width . " Center", "!\")
+
+helpGui.AddText("X" . (9 * width) . " Y" . (14 * height) . " W" . (3 * width) . " Right", "Laminal postalveolar click")
+helpGui.AddText("X" . (12 * width) . " Y" . (14 * height) . " W" . width . " Center", "=\")
+
+helpGui.AddText("X" . (9 * width) . " Y" . (15 * height) . " W" . (3 * width) . " Right", "Lateral coronal click")
+helpGui.AddText("X" . (12 * width) . " Y" . (15 * height) . " W" . width . " Center", "|\|\")
 
 ; Free memory.
 fileContents := ""
