@@ -11,4 +11,4 @@ Autohotkey script for typing IPA characters using their XSampa counterpart.
 
 If you want to cancel the conversion after you pressed `F8`, you can do so by pressing `Esc`.
 
-If you need a reminder about the XSampa characters, you can press `F1` to have the script show a pop-up window with the most commonly used characters.
+If you need a reminder about the XSampa characters, you can press `F1` to have the script show a pop-up window with the most commonly used ones.
