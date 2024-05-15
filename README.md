@@ -12,3 +12,12 @@ Autohotkey script for typing IPA characters using their XSampa counterpart.
 If you want to cancel the conversion after you pressed `F8`, you can do so by pressing `Esc`.
 
 If you need a reminder about the XSampa characters, you can press `F1` to have the script show a pop-up window with the most commonly used ones.
+
+
+## Installing
+You need to have `AutoHotkey v2` installed in order to run this script.
+
+- Download the file `XSampaConverter_x.y.z.zip`, where `x.y.z` is the version of the plugin.  You can find the latest version [here](https://github.com/looptailG/xsampa-converter/releases/latest).
+- Extract the folder `XSampaConverter`.  This folder contains the script `XSampaConverter.ahk`.
+
+The script needs the contents of the other files in this folder in order to run correctly, so you have to run the file `XSampaConverter.ahk` from inside this folder.
