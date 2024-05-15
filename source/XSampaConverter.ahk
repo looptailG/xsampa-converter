@@ -208,7 +208,7 @@ helpGui.AddText("X" . (12 * width) . " Y" . (12 * height) . " W" . width . " Cen
 helpGui.AddText("X" . (9 * width) . " Y" . (13 * height) . " W" . (3 * width) . " Right", "Apical alveolar click")
 helpGui.AddText("X" . (12 * width) . " Y" . (13 * height) . " W" . width . " Center", "!\")
 
-helpGui.AddText("X" . (9 * width) . " Y" . (14 * height) . " W" . (3 * width) . " Right", "Laminal postalveolar click")
+helpGui.AddText("X" . (9 * width) . " Y" . (14 * height) . " W" . (3 * width) . " Right", "Laminal post-alveolar click")
 helpGui.AddText("X" . (12 * width) . " Y" . (14 * height) . " W" . width . " Center", "=\")
 
 helpGui.AddText("X" . (9 * width) . " Y" . (15 * height) . " W" . (3 * width) . " Right", "Lateral coronal click")
