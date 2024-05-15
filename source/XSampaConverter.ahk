@@ -38,8 +38,13 @@ For _, currentLine in fileContents
 	}
 }
 
+; Change tray icon.
+activeTrayIcon := config["ActiveTrayIcon"]
+inactiveTrayIcon := config["InactiveTrayIcon"]
+TraySetIcon inactiveTrayIcon, , false
+
 ; Read character mapping file.
-fileContents := FileRead(config["characterMappingFilePath"])
+fileContents := FileRead(config["CharacterMappingFilePath"])
 fileContents := StrSplit(fileContents, "`n")
 For _, currentLine in fileContents
 {
@@ -61,8 +66,8 @@ characterMappingKeys := Sort(characterMappingKeys, , reverseSortByLength)
 characterMappingSortedKeys := StrSplit(characterMappingKeys, "`n")
 
 ; Build help GUI.
-width := config["columnWidth"]
-height := config["rowHeight"]
+width := config["ColumnWidth"]
+height := config["RowHeight"]
 helpGui := Gui(, "XSampa Converter - v" . version, )
 helpGui.AddText("X" . width . " Y0 W" . width . " Center", "Bilabial")
 helpGui.AddText("X" . (2 * width) . " Y0 W" . width . " Center", "Labiodental")
@@ -218,17 +223,19 @@ helpGui.AddText("X" . (12 * width) . " Y" . (15 * height) . " W" . width . " Cen
 fileContents := ""
 characterMappingKeys := ""
 
-Hotkey config["replaceStringHotkey"], replaceXSampaString
-Hotkey config["displayHelpHotkey"], displayHelp
+Hotkey config["ReplaceStringHotkey"], replaceXSampaString
+Hotkey config["DisplayHelpHotkey"], displayHelp
 
 replaceXSampaString(thisHotkey)
 {
-	ih := InputHook("V", config["endInputKeys"])
+	TraySetIcon activeTrayIcon, , false
+	
+	ih := InputHook("V", config["EndInputKeys"])
 	ih.Start()
 	ih.Wait()
 	inputString := ih.Input
 	
-	If (ih.EndKey != config["cancelKey"])
+	If (ih.EndKey != config["CancelKey"])
 	{
 		; Delete the string written by the user.
 		nCharacters := StrLen(inputString) + 1
@@ -248,6 +255,8 @@ replaceXSampaString(thisHotkey)
 		}
 		SendInput(inputString)
 	}
+	
+	TraySetIcon inactiveTrayIcon, , false
 }
 
 displayHelp(thisHotkey)

@@ -1,7 +1,9 @@
-characterMappingFilePath	CharacterMapping.tsv
-replaceStringHotkey	F8
-displayHelpHotkey	F1
-endInputKeys	{Tab}{Enter}{Esc}
-cancelKey	Escape
-columnWidth	60
-rowHeight	20
+CharacterMappingFilePath	CharacterMapping.tsv
+ReplaceStringHotkey	F8
+DisplayHelpHotkey	F1
+EndInputKeys	{Tab}{Enter}{Esc}
+CancelKey	Escape
+ColumnWidth	60
+RowHeight	20
+ActiveTrayIcon	icons\ActiveIcon.ico
+InactiveTrayIcon	icons\InactiveIcon.ico
